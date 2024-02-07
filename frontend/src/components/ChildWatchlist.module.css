@@ -1,0 +1,136 @@
+/* Watchlist.module.css */
+
+.videocontainer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .videolist {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+  
+  .videoitem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centered both horizontally and vertically */
+    flex-direction: column;
+    width: 250px;
+    max-width: 100%;
+    height: 200px;
+    background: black;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    margin-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .videoitem:hover {
+    height: 300px;
+    cursor: pointer;
+  }
+  
+  .videothumbnailcontainer {
+    position: relative;
+    top: 10px;
+    width: 210px;
+    height: 120px;
+    background: #333;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .videoitem:hover .videothumbnailcontainer {
+    top: -50px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  }
+  
+  .videothumbnailcontainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .videotitle {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Set the initial height for the title */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centered both horizontally and vertically */
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: -23%;
+    top: 40%; /* Adjusted the top position for initial alignment */
+  }
+  
+  .videoitem:hover .videotitle {
+    top: 50%; /* Adjusted the top position on hover */
+    transform: translateY(-50%);
+    height: 100%; /* Adjusted the height on hover */
+  }
+  
+  .videotitle h3 {
+    font-size: 0.9rem;
+    color: grey;
+    font-weight: 900;
+  }
+  
+  .removeButton {
+    position: absolute; /* Positioned the remove button absolutely */
+    bottom: 15px; /* Adjusted the bottom position for the remove button */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr); /* Use your theme color variable */
+    color: white;
+    font-weight: 500;
+   margin-bottom: 15%;
+    border: none;
+    background-color: orangered;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    transition: opacity 0.3s ease;
+  }
+  
+  .videoitem:hover .removeButton {
+    opacity: 1; /* Display the remove button on hover */
+  
+  }
+  
+  @media (max-width: 480px) {
+    .videoitem {
+      width: 230px;
+      border-radius: 15px;
+      margin-right: 10px;
+    }
+  
+    .videothumbnailcontainer {
+      width: 185px;
+    }
+  
+    .videotitle h3 {
+      font-size: 0.8rem;
+    }
+  
+    .removeButton {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Other styles as needed */
+  
